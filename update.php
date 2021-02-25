@@ -8,8 +8,6 @@
     <title>UPDATE</title>
     <script>
         function changePlaceholder() {
-            var dato = document.getElementById('task').value;
-            console.log(dato);
             document.getElementById('name').value = document.getElementById('task').value;
         }
     </script>
