@@ -37,8 +37,14 @@ switch ($value) {
         echo '<h1>Task ' . $_POST["task"] . ' Delete</h1>';
         include_once('goIndex.php');
         break;
-
-
+    case 'Update':
+        var_dump($_POST);
+        $sql = "UPDATE `apptareas`.`tarea` SET `estado` = ? WHERE `nombre` = ?;";
+        $consulta = $pdo->prepare($sql);
+        $consulta->execute([$_POST["status"], $_POST["task"]]);
+        echo $consulta->rowCount();
+        echo '<h1>Task ' . $_POST["task"] . ' Update</h1>';
+        break;
 
     default:
         echo "<br>";
@@ -67,5 +73,3 @@ function bringValuesRead()
 
     return $datos;
 }
-
-?>
