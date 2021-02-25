@@ -37,14 +37,7 @@ switch ($value) {
         echo '<h1>Task ' . $_POST["task"] . ' Delete</h1>';
         include_once('goIndex.php');
         break;
-//     case 'Update':
-//         UPDATE `apptareas`.`tarea` SET `estado` = 'HOL' WHERE (`id` = '18');
-//         $sql = "UPDATE `apptareas`.`tarea` SET `estado` = 'HOL' WHERE (`id` = '18');";
-// $consulta = $pdo->prepare($sql);
-// $consulta->execute([$nuevoNombre,$idActualizar]);
-// echo $consulta->rowCount();
-//         echo '<h1>Task ' . $_POST["task"] . ' Delete</h1>';
-//         break;
+
 
 
     default:
