@@ -42,7 +42,6 @@ switch ($value) {
         $sql = "UPDATE `apptareas`.`tarea` SET `estado` = ? WHERE `nombre` = ?;";
         $consulta = $pdo->prepare($sql);
         $consulta->execute([$_POST["status"], $_POST["task"]]);
-        echo $consulta->rowCount();
         echo '<h1>Task ' . $_POST["task"] . ' Update</h1>';
         break;
 
